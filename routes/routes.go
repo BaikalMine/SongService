@@ -5,8 +5,8 @@ import (
 
 	"github.com/BaikalMine/SongService/controllers"
 	"github.com/gin-gonic/gin"
-	"github.com/swaggo/files"
-	"github.com/swaggo/gin-swagger"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
 // SetupRouter инициализирует маршруты API, включая swagger UI.
@@ -14,7 +14,7 @@ func SetupRouter(db *sql.DB, externalAPIUrl string) *gin.Engine {
 	router := gin.Default()
 
 	// Swagger UI
-	router.GET("/swagger/*any", ginSwagger.WrapHandler(files.Handler))
+	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	// Маршруты для песен
 	router.GET("/songs", func(c *gin.Context) {
