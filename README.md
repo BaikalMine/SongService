@@ -15,21 +15,22 @@
 ```
 .
 ├── cmd
-│   └── main.go            # Точка входа приложения
+│   └── main.go              # Точка входа приложения
 ├── config
-│   └── config.go          # Конфигурация из .env
+│   └── config.go            # Конфигурация из .env
 ├── database
-│   ├── migration.go       # Миграции базы данных
-│   └── transaction.go     # Транзакции
+│   ├── migration.go         # Миграции базы данных
+│   └── transaction.go       # Управление транзакциями
 ├── controllers
-│   └── song_controller.go # Логика обработки запросов
+│   └── song_controller.go   # Логика обработки запросов
 ├── models
-│   └── song.go            # Модель данных песни
+│   └── song.go              # Модель данных песни
 ├── routes
-│   └── routes.go          # Маршрутизация API
-└── docs                   # Swagger-документация
+│   └── routes.go            # Маршрутизация API
+├── docs                     # Swagger-документация
+└── .env                     # Файл конфигурации
 
-.env                       # Файл конфигурации
+```
 
 ## Установка и запуск
 
